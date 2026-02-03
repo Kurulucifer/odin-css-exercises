@@ -10,8 +10,8 @@
   font-size: 36px;
 }
 
-/* Note: could've used another class to contain font-size instead of
-having it in both third and fourth */
+/* Hindsight post-solution: could've used another class to contain font-size 
+instead of having it in both third and fourth. Or, a grouping selector?*/
 
 .third {
   font-size: 24px;
