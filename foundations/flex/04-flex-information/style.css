@@ -10,6 +10,22 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.item {
+  width: 200px;
+  max-width: 200px;
+  text-align: center;
 }
 
 /* do not edit this footer */
@@ -24,3 +40,13 @@ img {
   justify-content: center;
   background: #eee;
 }
+
+/*
+
+oh I just turned title to flex and centered it that way lmao
+text-align could've went to body since everything, including title,
+should be centered.
+also should've used max-width instead of width since max-width 
+allos the element to scale down (?)
+
+*/
