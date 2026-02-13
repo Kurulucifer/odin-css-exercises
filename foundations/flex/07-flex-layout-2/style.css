@@ -2,28 +2,107 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* post-solution */
+  flex: 1;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+
+  padding: 16px;
+  min-width: 300px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+
+  padding: 8px;
+  /* margin: 8px; */
+  /*
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 500px;
+  max-height: 500px;
+  */
+  width: 300px;
+  max-height: 900px;
 }
+
+/* stuff I added */
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  /* flex: 1 */
+  padding: 48px;
+
+  /* post-solution */
+  gap: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul > li {
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.contents {
+  display: flex;
+  flex: 1;
+}
+
+/*
+didn't need to add justify-content to body
+oh I could've just set flex-shrink on the sidebar to 0
+and not use min-width...
+didn't need to add top-bottom padding on header
+didn't need flex on cards?
+didn't need min/max dimensions I see....
+well, maybe for width.
+and maybe a max height so the cards don't look silly
+when on a comically tall screen...
+ALSO INSTEAD OF MARGIN ON CARDS
+I COULD'VE USED GAP OMG BRO HOW COULD I FORGET
+*/
