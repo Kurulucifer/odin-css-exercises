@@ -20,6 +20,10 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+
+  display: flex;
+  padding: 16px;
+  gap: 16px;
 }
 
 .icon {
@@ -48,6 +52,8 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+
+  margin-left: auto;
 }
 
 button {
@@ -67,3 +73,38 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+
+.icon, .close-button {
+  flex-shrink: 0;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  /* post-solution */
+  flex-wrap: wrap;
+}
+
+/*
+hindsight: could've done justify-content: space-between
+instead of using margin-left: auto on the close button.
+
+Also I set the container as a flex container separately
+The solution did not use a flexbox, just flow and margins.
+Using flex makes extreme resizing (down) kinda weird (it
+doesn't resize as extremely as the solution).
+*/
