@@ -5,6 +5,10 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +20,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+
+  padding: 12px;
 }
 
 input {
@@ -24,3 +30,42 @@ input {
   padding: 8px 24px;
   width: 400px;
 }
+
+/* stuff I added */
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.left-links, .right-links {
+  list-style-type: none;
+  display: flex;
+  padding: 24px;
+  margin: 0px;
+  gap: 16px;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 16px;
+}
+
+
+/*
+could've put gap on ul instead instead of doing it on the links
+also differential padding on buttons and putting padding on the 
+headers/footers themselves instead of the links LOL
+not sure why I did it all on the links but noted!
+*/
